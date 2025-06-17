@@ -76,7 +76,7 @@ Os arquivos de produção serão gerados na pasta `www/`.
 
 **Alexsandro Acioli Pimentel Filho**
 - Email: aciolialexsandro12@gmail.com
-- GitHub: [[@seuusuario](https://github.com/seuusuario)](https://github.com/ac1oli/mobileRickMorty)
+- GitHub: [[@ac1oli](https://github.com/seuusuario)](https://github.com/ac1oli/mobileRickMorty)
 - Instituição: UNINASSAU
 - Curso: Desenvolvimento de Aplicativos Móveis
 
