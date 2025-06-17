@@ -95,32 +95,6 @@ Este projeto está licenciado sob a Licença Creative Commons - veja o arquivo [
 - **HTML5**: Linguagem de marcação para estruturação do conteúdo
 - **CSS3**: Linguagem de estilo para apresentação visual
 
-### Estrutura do Projeto
-
-```
-src/
-├── app/
-│   ├── services/
-│   │   └── rick-morty.service.ts    # Serviço para consumo da API
-│   ├── tab1/                        # Aba de listagem de personagens
-│   │   ├── tab1.page.html
-│   │   ├── tab1.page.ts
-│   │   └── tab1.page.scss
-│   ├── tab2/                        # Aba de detalhes do personagem
-│   │   ├── tab2.page.html
-│   │   ├── tab2.page.ts
-│   │   └── tab2.page.scss
-│   ├── tab3/                        # Aba sobre o autor
-│   │   ├── tab3.page.html
-│   │   ├── tab3.page.ts
-│   │   └── tab3.page.scss
-│   └── tabs/                        # Componente de navegação por abas
-│       ├── tabs.page.html
-│       └── tabs.page.ts
-├── assets/                          # Recursos estáticos
-└── theme/                           # Arquivos de tema e estilos globais
-```
-
 ### API Utilizada
 
 Este projeto consome a [Rick and Morty API](https://rickandmortyapi.com/), uma API REST gratuita que fornece dados sobre:
