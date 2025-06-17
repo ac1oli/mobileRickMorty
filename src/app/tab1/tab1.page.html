@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Personagens Rick & Morty
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Personagens</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar 
+    placeholder="Buscar personagens..." 
+    (ionInput)="onSearchChange($event)"
+    [value]="searchTerm">
+  </ion-searchbar>
+
+  <ion-list>
+    <ion-item 
+      *ngFor="let character of characters" 
+      button 
+      (click)="viewCharacterDetails(character)">
+      <ion-avatar slot="start">
+        <img [src]="character.image" [alt]="character.name" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ character.name }}</h2>
+        <p>{{ character.species }} - {{ character.status }}</p>
+        <p>{{ character.location.name }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="isLoading && characters.length === 0" style="text-align: center; padding: 20px;">
+    <ion-spinner></ion-spinner>
+    <p>Carregando personagens...</p>
+  </div>
+
+  <ion-infinite-scroll 
+    threshold="100px" 
+    (ionInfinite)="loadMore($event)"
+    [disabled]="searchTerm !== ''">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Carregando mais personagens...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+

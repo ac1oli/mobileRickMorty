@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Dono PAPAI
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Sobre</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <div style="text-align: center; padding: 20px;">
+      <ion-avatar style="width: 100px; height: 100px; margin: 0 auto;">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Avatar do Autor" />
+      </ion-avatar>
+    </div>
+    
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">{{ studentInfo.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Nome</h3>
+          <p>{{ studentInfo.name }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="school-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Curso</h3>
+          <p>{{ studentInfo.course }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="school-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Instituição</h3>
+          <p>{{ studentInfo.institution }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button (click)="sendEmail()">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-label>
+          <h3>Email</h3>
+          <p>{{ studentInfo.email }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item button (click)="openGithub()">
+        <ion-icon name="logo-github" slot="start"></ion-icon>
+        <ion-label>
+          <h3>GitHub</h3>
+          <p>Ver repositório do projeto</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sobre o Projeto</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ studentInfo.projectDescription }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tecnologias Utilizadas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let tech of studentInfo.technologies">
+        <ion-label>
+          <p>• {{ tech }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
