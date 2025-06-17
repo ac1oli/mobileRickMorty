@@ -74,10 +74,10 @@ Os arquivos de produção serão gerados na pasta `www/`.
 
 ## Autor
 
-**Seu Nome Aqui**
-- Email: seu.email@exemplo.com
-- GitHub: [@seuusuario](https://github.com/seuusuario)
-- Instituição: Sua Instituição
+**Alexsandro Acioli Pimentel Filho**
+- Email: aciolialexsandro12@gmail.com
+- GitHub: [[@seuusuario](https://github.com/seuusuario)](https://github.com/ac1oli/mobileRickMorty)
+- Instituição: UNINASSAU
 - Curso: Desenvolvimento de Aplicativos Móveis
 
 ## Licença
